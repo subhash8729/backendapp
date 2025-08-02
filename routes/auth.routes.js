@@ -9,6 +9,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 router.post('/login',login)
+router.get("/subhash",(req,res)=>{
+    res.send("hello subhash")
+})
 router.post('/signup',signup)
 router.get("/getdata",sendData);
 router.post("/finduser",findUser);
